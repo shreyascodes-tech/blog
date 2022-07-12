@@ -74,4 +74,4 @@ ECMAScript is specification that the JavaScript programming language confirms to
 ES2015 or ES6 is an ECMAScript that brings so many modern features to JavaScript like import/export syntax
 Promises, Generators etc. We will take a look at some of the features introduced in ES6 in this article
 
-Enough theory let;s start learning some JavaScript
+**Enough theory let's start learning some JavaScript**

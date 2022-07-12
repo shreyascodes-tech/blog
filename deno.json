@@ -1,8 +1,8 @@
 {
   "importMap": "import_map.json",
   "tasks": {
-    "dev": "PORT=3333 DEV=dev denon run -A ./main.tsx",
-    "start": "PORT=3333 deno run -A --no-check ./main.tsx",
+    "dev": "PORT=3333 DEV=dev denon run -A ./main.ts",
+    "start": "PORT=3333 deno run -A --no-check ./main.ts",
     "gen": "deno run -A ./src/blog.tsx",
     "deploy": "deno run -A ./src/deploy.ts"
   }
