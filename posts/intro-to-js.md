@@ -1,3 +1,7 @@
+---
+title: JavaScript the practical Guide
+---
+
 # JavaScript the practical Guide
 
 In this article I will teach the basics of JavaScript, the practical way no boring theory that no body cares, so let us get started
