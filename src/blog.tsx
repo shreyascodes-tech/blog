@@ -30,7 +30,7 @@ ul {
 
 
 header {
-  padding: 1rem 0 .5rem ;
+  padding: 1rem 0 .5rem 0;
   margin-bottom: 1rem;
   background: #0d131d55;
   backdrop-filter: blur(24px);
@@ -40,7 +40,7 @@ header {
 }
 
 main, header div {
-  max-width: 1536px;
+  max-width: 100ch;
   margin: 0 auto;
   padding: .5rem 1rem;
 }
