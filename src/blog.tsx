@@ -42,6 +42,7 @@ header {
 main, header div {
   max-width: 1536px;
   margin: 0 auto;
+  padding: .5rem 1rem;
 }
 
 main.home h1, main.home a {
