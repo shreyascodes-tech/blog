@@ -1,4 +1,4 @@
-import { handler, loadBlogs } from "./blog.tsx";
+import { handler, loadBlogs } from "./src/blog.tsx";
 import blogs from "./blogs.g.json" assert { type: "json" };
 
 import { serve } from "http";

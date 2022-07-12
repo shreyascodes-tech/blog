@@ -1,3 +1,4 @@
+// deno-lint-ignore-file no-explicit-any
 /** @jsx h  */
 import { h, FunctionalComponent as FC, Fragment } from "htm";
 import Header from "./components/header.tsx";
