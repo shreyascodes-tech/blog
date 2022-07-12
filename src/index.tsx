@@ -12,33 +12,12 @@ const Index: FC<{
   return (
     <Fragment>
       <Header />
-      <main>
-        <h1
-          style={{
-            color: "#c9d1d9",
-          }}
-        >
-          All Blogs
-        </h1>
-        <ul
-          style={{
-            margin: 0,
-            marginLeft: "1rem",
-            padding: 0,
-          }}
-        >
+      <main class="home">
+        <h1>All Blogs</h1>
+        <ul>
           {blogs.map(({ attributes, slug }) => (
             <li>
-              <a
-                style={{
-                  fontSize: "1.25rem",
-                  color: "#58a6ff",
-                  textDecoration: "none",
-                }}
-                href={`/${slug}`}
-              >
-                {attributes["title"]}
-              </a>
+              <a href={`/${slug}`}>{attributes["title"]}</a>
             </li>
           ))}
         </ul>

@@ -1,4 +1,5 @@
 import { handler, loadBlogs } from "./src/blog.tsx";
+// @ts-ignore dont worry if the ile is missing
 import blogs from "./blogs.g.json" assert { type: "json" };
 
 import { serve } from "http";

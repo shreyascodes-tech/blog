@@ -1,3 +1,4 @@
+// deno-lint-ignore-file
 /** @jsx h */
 
 import { walkSync } from "fs";
@@ -21,9 +22,39 @@ const styles = [
   background: #0d1117;
 }
 
-main {
+ul {
+  margin: 0;
+  margin-left: "1rem";
+  padding: 0;
+}
+
+
+header {
+  padding: 1rem 0 .5rem ;
+  margin-bottom: 1rem;
+  background: #0d131d55;
+  backdrop-filter: blur(24px);
+  box-shadow: 0 3px 5px #18325827;
+  position: sticky;
+  top: 0;
+}
+
+main, header div {
   max-width: 1536px;
   margin: 0 auto;
+}
+
+main.home h1, main.home a {
+  color: #c9d1d9;
+}
+
+main.home a {
+  font-size: "1.25rem";
+  text-decoration: none;
+}
+
+main.markdown-body {
+  margin-bottom: 4rem;
 }`,
 ];
 
