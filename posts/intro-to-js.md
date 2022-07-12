@@ -1,5 +1,5 @@
 ---
-title: JavaScript the practical Guide
+title: JavaScript the practical Guide (WIP)
 ---
 
 # JavaScript the practical Guide
@@ -30,3 +30,12 @@ copy the above code into the console and hit enter to run it
 
 🎊 wohooo you've written your very first JavaScript program, If you run the above code int the console it prints `Hello World` as you might have expected
 
+## The Runtime
+
+JavaScript is a scripting language is interpreted, meaning it can't directly run on a cpu.
+So to run JS code we need a `runtime` that well converts the JS code we write into instructions that a CPU can understand and execute. There are a lot of different JS runtimes such as 
+
+    - Chrome's V8 engine
+    - Safari's JavaScript Core engine
+    - Firefox's SpiderMonkey engine
+JavaScript itself doen't have anything to do practical things 
