@@ -1,5 +1,5 @@
-import { handler as dev } from "./dev.tsx";
-import { handler as prod } from "./prod.tsx";
+import { handler, loadBlogs } from "./blog.tsx";
+import blogs from "./blogs.g.json" assert { type: "json" };
 
 import { serve } from "http";
 import { yellow, bold, underline } from "fmt/colors.ts";
@@ -7,7 +7,7 @@ import { yellow, bold, underline } from "fmt/colors.ts";
 const port = +(Deno.env.get("PORT") ?? "80");
 const DEV = !!Deno.env.get("DEV");
 
-serve(DEV ? dev() : prod, {
+serve(handler(DEV ? loadBlogs() : blogs), {
   port,
   onListen: ({ port }) =>
     console.log(

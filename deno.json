@@ -3,7 +3,7 @@
   "tasks": {
     "dev": "PORT=3333 DEV=dev denon run -A ./main.tsx",
     "start": "PORT=3333 deno run -A --no-check ./main.tsx",
-    "gen": "deno run -A ./blog.ts",
+    "gen": "deno run -A ./blog.tsx",
     "deploy": "deno run -A ./deploy.ts"
   }
 }

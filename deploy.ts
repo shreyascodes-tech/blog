@@ -1,5 +1,5 @@
 import { blue, bold, red, green } from "fmt/colors.ts";
-import { loadBlogs } from "./blog.ts";
+import { loadBlogs } from "./blog.tsx";
 
 const commit = Deno.args[0];
 const filesToPush = Deno.args.slice(1);
