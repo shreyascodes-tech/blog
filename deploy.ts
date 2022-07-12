@@ -12,21 +12,30 @@ const blogs = loadBlogs();
 Deno.writeTextFileSync("blogs.g.json", JSON.stringify(blogs, null, 4));
 console.log(green("✅ Built ") + blue("blogs.g.json"));
 console.log(blue("Deploying to production"));
+
+const decoder = new TextDecoder("utf-8");
+
 console.log(
-  await Deno.run({
-    stdout: "piped",
-    cmd: ["git", "add", ...filesToPush],
-  }).output()
+  decoder.decode(
+    await Deno.run({
+      stdout: "piped",
+      cmd: ["git", "add", ...filesToPush],
+    }).output()
+  )
 );
 console.log(
-  await Deno.run({
-    stdout: "piped",
-    cmd: ["git", "commit", "-m", commit],
-  }).output()
+  decoder.decode(
+    await Deno.run({
+      stdout: "piped",
+      cmd: ["git", "commit", "-m", commit],
+    }).output()
+  )
 );
 console.log(
-  await Deno.run({
-    stdout: "piped",
-    cmd: ["git", "push"],
-  }).output()
+  decoder.decode(
+    await Deno.run({
+      stdout: "piped",
+      cmd: ["git", "push"],
+    }).output()
+  )
 );
