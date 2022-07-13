@@ -30,6 +30,12 @@ const Index: FC<{
           ))}
         </ul>
       </main>
+      <script
+        async
+        defer
+        data-website-id="9b902b25-adb6-4607-a9ad-4fb1e1c96a9b"
+        src="https://umami.shreyascodes.tech/umami.js"
+      ></script>
     </Fragment>
   );
 };
