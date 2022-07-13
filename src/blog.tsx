@@ -2,11 +2,11 @@
 /** @jsx h */
 
 import { walkSync } from "fs";
-import { resolve } from "path";
+import { resolve, relative } from "path";
 import frontMatter from "https://esm.sh/front-matter@4.0.2";
 import { render as md } from "gfm";
 import { CSS } from "gfm";
-
+import { serveFile } from "file-server";
 import { router, Routes } from "router";
 import { html, h, Fragment } from "htm";
 
@@ -89,6 +89,23 @@ export function loadBlogs(blogsDir = "posts") {
   return blogs;
 }
 
+export function loadAssets(assetsDir = "assets") {
+  // deno-lint-ignore no-explicit-any
+
+  const assets: { path: string; route: string }[] = [];
+  const entries = walkSync(resolve(Deno.cwd(), "assets"), {
+    exts: [".png", ".jpg", ".jpeg", ".svg", ".gif"],
+  });
+
+  for (const { path } of entries) {
+    const route = relative(Deno.cwd(), path).replaceAll("\\", "/");
+
+    assets.push({ path, route });
+  }
+
+  return assets;
+}
+
 export const handler = (
   blogs: {
     slug: string;
@@ -96,6 +113,11 @@ export const handler = (
     attributes: any;
   }[]
 ) => {
+  const assetsRoutes: Routes = {};
+  for (const { route, path } of loadAssets()) {
+    assetsRoutes[`GET@/${route}`] = (req) => serveFile(req, path);
+  }
+
   const blogRoutes: Routes = {};
   for (const { slug, attributes, body } of blogs) {
     blogRoutes[`GET@/${slug}`] = () =>
@@ -131,6 +153,7 @@ export const handler = (
         links,
         body: <IndexPage blogs={blogs} />,
       }),
+    ...assetsRoutes,
     ...blogRoutes,
   });
 };
