@@ -173,14 +173,15 @@ export const handler = (
           ["og:type"]: "website",
           ["og:title"]: attributes["title"],
           ["og:description"]: attributes["description"],
-          ["og:image"]: "https://blog.shreyascodes.tech/assets/og-image.png",
+          ["og:image"]:
+            "https://blog.shreyascodes.tech/" + attributes["description"],
           ["twitter:card"]: "summary_large_image",
           ["twitter:domain"]: "blog.shreyascodes.tech",
           ["twitter:url"]: "https://blog.shreyascodes.tech/" + slug,
           ["twitter:title"]: attributes["title"],
           ["twitter:description"]: attributes["description"],
           ["twitter:image"]:
-            "https://blog.shreyascodes.tech/assets/og-image.png",
+            "https://blog.shreyascodes.tech/" + attributes["description"],
           description: attributes["description"],
         },
         styles,
