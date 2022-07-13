@@ -92,15 +92,15 @@ export function loadBlogs(blogsDir = "posts") {
 export function loadAssets(assetsDir = "assets") {
   // deno-lint-ignore no-explicit-any
 
-  const assets: { path: string; route: string }[] = [];
-  const entries = walkSync(resolve(Deno.cwd(), "assets"), {
+  const assets: { route: string }[] = [];
+  const entries = walkSync(resolve(Deno.cwd(), assetsDir), {
     exts: [".png", ".jpg", ".jpeg", ".svg", ".gif"],
   });
 
   for (const { path } of entries) {
     const route = relative(Deno.cwd(), path).replaceAll("\\", "/");
 
-    assets.push({ path, route });
+    assets.push({ route });
   }
 
   return assets;
@@ -111,11 +111,14 @@ export const handler = (
     slug: string;
     body: string;
     attributes: any;
+  }[],
+  assets: {
+    route: string;
   }[]
 ) => {
   const assetsRoutes: Routes = {};
-  for (const { route, path } of loadAssets()) {
-    assetsRoutes[`GET@/${route}`] = (req) => serveFile(req, path);
+  for (const { route } of assets) {
+    assetsRoutes[`GET@/${route}`] = (req) => serveFile(req, "./" + route);
   }
 
   const blogRoutes: Routes = {};
@@ -161,5 +164,7 @@ export const handler = (
 if (import.meta.main) {
   const blogs = loadBlogs();
   Deno.writeTextFileSync("blogs.g.json", JSON.stringify(blogs, null, 4));
+  const assets = loadAssets();
+  Deno.writeTextFileSync("assets.g.json", JSON.stringify(assets, null, 4));
   Deno.exit(0);
 }

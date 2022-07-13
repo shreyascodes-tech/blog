@@ -1,5 +1,5 @@
 import { blue, bold, red, green } from "fmt/colors.ts";
-import { loadBlogs } from "./blog.tsx";
+import { loadBlogs, loadAssets } from "./blog.tsx";
 
 const commit = Deno.args[0];
 const filesToPush = Deno.args.slice(1);
@@ -11,6 +11,12 @@ console.log(green("📝 Building ") + blue("blogs.g.json"));
 const blogs = loadBlogs();
 Deno.writeTextFileSync("blogs.g.json", JSON.stringify(blogs, null, 4));
 console.log(green("✅ Built ") + blue("blogs.g.json"));
+console.log(blue("Deploying to production"));
+
+console.log(green("📝 Building ") + blue("assets.g.json"));
+const assets = loadAssets();
+Deno.writeTextFileSync("assets.g.json", JSON.stringify(assets, null, 4));
+console.log(green("✅ Built ") + blue("assets.g.json"));
 console.log(blue("Deploying to production"));
 
 const decoder = new TextDecoder("utf-8");
