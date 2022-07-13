@@ -1,6 +1,6 @@
 ---
 title: JavaScript the practical Guide
-thumbnail: assets/intro-to-js/thumb.png
+thumbnail: assets/intro-to-js/thumb-min.png
 ---
 
 ![JavaScript a practical Guide](assets/intro-to-js/thumb.png)
