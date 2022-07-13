@@ -17,7 +17,15 @@ const Index: FC<{
         <ul>
           {blogs.map(({ attributes, slug }) => (
             <li>
-              <a href={`/${slug}`}>{attributes["title"]}</a>
+              <a href={`/${slug}`}>
+                {attributes["thumbnail"] && (
+                  <img
+                    src={attributes["thumbnail"]}
+                    alt={attributes["title"]}
+                  />
+                )}
+                {attributes["title"]}
+              </a>
             </li>
           ))}
         </ul>

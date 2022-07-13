@@ -1,7 +1,9 @@
 ---
 title: JavaScript the practical Guide
+thumbnail: assets/intro-to-js/thumb.png
 ---
 
+![JavaScript a practical Guide](assets/intro-to-js/thumb.png)
 # JavaScript the practical Guide
 
 In this article I will teach the basics of JavaScript, so let us get started

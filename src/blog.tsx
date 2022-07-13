@@ -49,13 +49,52 @@ main.home h1, main.home a {
   color: #c9d1d9;
 }
 
+main.home h1 {
+  text-align: center;
+}
+
 main.home a {
   font-size: "1.25rem";
   text-decoration: none;
 }
 
+main.home ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+main.home li {
+  display: block;
+  max-width: max-content;
+  padding: 1rem;
+  font-size: 1.125rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px;
+  transition: background-color .16s ease;
+}
+
+main.home li:hover {
+  background-color: #fff2;
+}
+
+main.home img {
+  display: block;
+  width: 100%;
+  max-width: 263px;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+}
+
 main.markdown-body {
   margin-bottom: 4rem;
+}
+main.markdown-body img:first-child {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
 }`,
 ];
 
