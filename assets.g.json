@@ -13,5 +13,8 @@
     },
     {
         "route": "assets/logo_white.webp"
+    },
+    {
+        "route": "assets/og-image.png"
     }
 ]
