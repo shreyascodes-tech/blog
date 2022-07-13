@@ -1,10 +1,10 @@
 ---
 title: JavaScript the practical Guide
 description: JavaScript the practical Guide - Article about the basics of JavaScript
-thumbnail: assets/intro-to-js/thumb-min.webp
+thumbnail: /assets/intro-to-js/thumb-min.webp
 ---
 
-![JavaScript a practical Guide](assets/intro-to-js/thumb.webp)
+![JavaScript a practical Guide](/assets/intro-to-js/thumb.webp)
 # JavaScript the practical Guide
 
 In this article I will teach the basics of JavaScript, so let us get started

@@ -162,7 +162,7 @@ export const handler = (
 
   const blogRoutes: Routes = {};
   for (const { slug, attributes, body } of blogs) {
-    blogRoutes[`GET@/${slug}`] = () =>
+    const h = () =>
       html({
         status: 200,
         lang: "en-us",
@@ -174,14 +174,16 @@ export const handler = (
           ["og:title"]: attributes["title"],
           ["og:description"]: attributes["description"],
           ["og:image"]:
-            "https://blog.shreyascodes.tech/" + attributes["thumbnail"],
+            "https://blog.shreyascodes.tech" +
+            attributes["thumbnail"].replace("-min", ""),
           ["twitter:card"]: "summary_large_image",
           ["twitter:domain"]: "blog.shreyascodes.tech",
           ["twitter:url"]: "https://blog.shreyascodes.tech/" + slug,
           ["twitter:title"]: attributes["title"],
           ["twitter:thumbnail"]: attributes["description"],
           ["twitter:image"]:
-            "https://blog.shreyascodes.tech/" + attributes["description"],
+            "https://blog.shreyascodes.tech" +
+            attributes["thumbnail"].replace("-min", ""),
           description: attributes["description"],
         },
         styles,
@@ -198,8 +200,10 @@ export const handler = (
           </Fragment>
         ),
       });
+    blogRoutes[`GET@/${slug}`] = h;
+    blogRoutes[`GET@/${slug}/`] = h;
+    blogRoutes[`GET@/${slug}/index.html`] = h;
   }
-
   return router({
     "GET@/": () =>
       html({
