@@ -169,6 +169,18 @@ export const handler = (
         colorScheme: "dark",
         title: attributes["title"],
         meta: {
+          ["og:url"]: "https://blog.shreyascodes.tech/" + slug,
+          ["og:type"]: "website",
+          ["og:title"]: attributes["title"],
+          ["og:description"]: attributes["description"],
+          ["og:image"]: "https://blog.shreyascodes.tech/assets/og-image.png",
+          ["twitter:card"]: "summary_large_image",
+          ["twitter:domain"]: "blog.shreyascodes.tech",
+          ["twitter:url"]: "https://blog.shreyascodes.tech/" + slug,
+          ["twitter:title"]: attributes["title"],
+          ["twitter:description"]: attributes["description"],
+          ["twitter:image"]:
+            "https://blog.shreyascodes.tech/assets/og-image.png",
           description: attributes["description"],
         },
         styles,
@@ -193,10 +205,24 @@ export const handler = (
         status: 200,
         lang: "en-us",
         meta: {
+          ["og:url"]: "https://blog.shreyascodes.tech/",
+          ["og:type"]: "website",
+          ["og:title"]: "Shreyas Mididoddi's Blog",
+          ["og:description"]:
+            "Shreyas Mididoddi's personal Blog where I talk about all kinds of programming and tech related stuff",
+          ["og:image"]: "https://blog.shreyascodes.tech/assets/og-image.png",
+          ["twitter:card"]: "summary_large_image",
+          ["twitter:domain"]: "blog.shreyascodes.tech",
+          ["twitter:url"]: "https://blog.shreyascodes.tech/",
+          ["twitter:title"]: "Shreyas Mididoddi's Blog",
+          ["twitter:description"]:
+            "Shreyas Mididoddi's personal Blog where I talk about all kinds of programming and tech related stuff",
+          ["twitter:image"]:
+            "https://blog.shreyascodes.tech/assets/og-image.png",
           description:
             "Shreyas Mididoddi's personal Blog where I talk about all kinds of pragramming related stuff",
         },
-        title: "Shreyascodes Blog",
+        title: "Shreyas Mididoddi's Blog",
         colorScheme: "dark",
         styles,
         links,
