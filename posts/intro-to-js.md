@@ -748,5 +748,7 @@ console.log(data);
 // }
 ```
 
-That's it this is the introduction to JavaScript basics =. I will go into asynchronous JavaScript
+<br>
+
+> That's it this is the introduction to JavaScript basics. I will go into asynchronous JavaScript
 in the future articles
