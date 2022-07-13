@@ -133,7 +133,7 @@ export function loadAssets(assetsDir = "assets") {
 
   const assets: { route: string }[] = [];
   const entries = walkSync(resolve(Deno.cwd(), assetsDir), {
-    exts: [".png", ".jpg", ".jpeg", ".svg", ".gif"],
+    exts: [".png", ".jpg", ".jpeg", ".svg", ".gif", ".webp"],
   });
 
   for (const { path } of entries) {

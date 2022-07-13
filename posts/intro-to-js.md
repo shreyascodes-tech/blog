@@ -1,9 +1,9 @@
 ---
 title: JavaScript the practical Guide
-thumbnail: assets/intro-to-js/thumb-min.png
+thumbnail: assets/intro-to-js/thumb-min.webp
 ---
 
-![JavaScript a practical Guide](assets/intro-to-js/thumb.png)
+![JavaScript a practical Guide](assets/intro-to-js/thumb.webp)
 # JavaScript the practical Guide
 
 In this article I will teach the basics of JavaScript, so let us get started
@@ -127,7 +127,7 @@ Running JavaScript requires a runtime/engine as you know so to run your JS
   ```
 - If Done right the files should look something like this
   <br>
-  <img src="/assets/intro-to-js/file-structure.png" height="200" alt="File Structure" >
+  <img src="/assets/intro-to-js/file-structure.webp" height="200" alt="File Structure" >
   <br>
 - Install a VSCode extension called live server
 - Open The html file
