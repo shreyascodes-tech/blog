@@ -1,5 +1,6 @@
 ---
 title: JavaScript the practical Guide
+description: JavaScript the practical Guide - Article about the basics of JavaScript
 thumbnail: assets/intro-to-js/thumb-min.webp
 ---
 

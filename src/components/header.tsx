@@ -6,10 +6,7 @@ const Header: FC = () => {
     <header>
       <div>
         <a href="/">
-          <img
-            src="https://shreyascodes.tech/build/_assets/logo_wide-73JBJKH5.svg"
-            alt="Shreyascodes Logo"
-          />
+          <img src="/assets/logo_white.webp" alt="Shreyascodes Logo" />
         </a>
       </div>
     </header>

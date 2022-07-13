@@ -101,7 +101,7 @@ main.markdown-body img:first-child {
 const links = [
   {
     rel: "icon",
-    href: "https://shreyascodes.tech/favicon.ico",
+    href: "/assets/favicon.webp",
   },
 ];
 
@@ -165,9 +165,12 @@ export const handler = (
     blogRoutes[`GET@/${slug}`] = () =>
       html({
         status: 200,
-        lang: "em",
+        lang: "en-us",
         colorScheme: "dark",
         title: attributes["title"],
+        meta: {
+          description: attributes["description"],
+        },
         styles,
         links,
         body: (
@@ -188,7 +191,11 @@ export const handler = (
     "GET@/": () =>
       html({
         status: 200,
-        lang: "em",
+        lang: "en-us",
+        meta: {
+          description:
+            "Shreyas Mididoddi's personal Blog where I talk about all kinds of pragramming related stuff",
+        },
         title: "Shreyascodes Blog",
         colorScheme: "dark",
         styles,

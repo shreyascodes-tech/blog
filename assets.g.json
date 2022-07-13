@@ -1,5 +1,8 @@
 [
     {
+        "route": "assets/favicon.webp"
+    },
+    {
         "route": "assets/intro-to-js/file-structure.webp"
     },
     {
@@ -7,5 +10,8 @@
     },
     {
         "route": "assets/intro-to-js/thumb.webp"
+    },
+    {
+        "route": "assets/logo_white.webp"
     }
 ]
