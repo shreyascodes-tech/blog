@@ -10,13 +10,12 @@ In this article I will teach the basics of JavaScript, so let us get started
 > of any other programming language. You don't have to be an expert but should
 > know basics like what a variable is or what an operator is for example
 
-
 ## What is JavaScript
 
-JavaScript is one of the most used programming language in the world, used by
-the biggest companies in the world liek Netflix, Google, Amazon, Facebook,
+JavaScript is one of the most used programming languages in the world, used by
+the biggest companies in the world like Netflix, Google, Amazon, Facebook,
 Instagram, Twitter, PayPal and many more. If you see any website that has a
-basic interactivity then it most likely is built with JavaScript.
+basic interactivity then it is most likely to be built with JavaScript.
 
 ## What can JavaScript be used for
 
@@ -33,7 +32,7 @@ question what can be built with JavaScript, well
     - Mobile Apps
     - Desktop Apps
     - Server Side Apps
-    - Realtime Apps ( like live chats and media streaming services ) 
+    - Realtime Apps ( like live chats and media streaming services )
     - Games
     - Command Line Apps
 
@@ -70,7 +69,6 @@ ES2015 or ES6 is an ECMAScript that brings so many modern features to JavaScript
 like import/export syntax Promises, Generators etc. We will take a look at some
 of the features introduced in ES6 in this article
 
-
 ## The Browser Console
 
 As we know we need a JavaScript engine to run our code so to run js in a browser one of the
@@ -99,32 +97,37 @@ copy the above code into the console and hit enter to run it
 code int the console it prints `Hello World` as you might have expected
 
 ## An IDE for JavaScript
+
 This is a practical JavaScript tutorial but we hvae used a browser console to write
 our JavaScript which is not very practical
 
 So to write JavaScript I suggest [VSCode](https://code.visualstudio.com/) It has js support
 out of the box
+
 - Create a .js file
 - Write your JS
 - Save the file
 
 ## Executing your code
+
 Running JavaScript requires a runtime/engine as you know so to run your JS
 
 ### To run your JS in a browser
+
 - Create a file with `.html` extension alongside your js file
 - Paste the following code in it and replace `yourjsfile.js` with your js file name
-    ```html
-    <html>
-        <body>
-            <script src="yourjsfile.js"></script>
-        </body>
-    </html>
+  ```html
+  <html>
+    <body>
+      <script src="yourjsfile.js"></script>
+    </body>
+  </html>
+  ```
 - If Done right the files should look something like this
-    <br>
-    <img src="/assets/intro-to-js/file-structure.png" height="200" alt="File Structure" >
-    <br>
--  Install a VSCode extension called live server
+  <br>
+  <img src="/assets/intro-to-js/file-structure.png" height="200" alt="File Structure" >
+  <br>
+- Install a VSCode extension called live server
 - Open The html file
 - Right click and select open with live server
 - A browser window should open
@@ -145,7 +148,7 @@ example
 // This is a single line comment that will not be parsed or executed by JS engine
 ```
 
-**Multi Line or Block Comments** anything between `/*  */` is a block comment
+**Multi Line or Block Comments** anything between `/* */` is a block comment
 
 example
 
@@ -156,9 +159,9 @@ example
 */
 ```
 
-**Doc Comments** anything between `/**  */` is a doc comment, doc comments are
+**Doc Comments** anything between `/** */` is a doc comment, doc comments are
 used to give additional information about a variable, function, class etc to the
-developer using our code or help our future selves to undersstannd a complex
+developer using our code or help our future selves to understand a complex
 piece of code that may be hard to understand
 
 example
@@ -250,43 +253,50 @@ console.log(PI); // 3.141592653
 > **Note**: It is common to name literal constants like PI in all uppercase
 
 ## The Number Type
-In JavaScript there is only one number type that represents any kind of number 
+
+In JavaScript there is only one number type that represents any kind of number
 like integer or a floating point number
 
 ### Some operations on numbers
 
 Addition
+
 ```js
-let add = 10 + 20 // add = 20
-add += 10 // adds 10 to the current add value
+let sum = 10 + 20; // sum = 20
+sum += 10; // sums 10 to the current add value
 console.log(add); // 30
 ```
 
 Subtraction
+
 ```js
-let diff = 10 - 20 // diff = -10
-diff -= 10
+let diff = 20 - 10; // diff = 10
+diff -= 10;
 console.log(diff); // diff = 0
 ```
 
 Multiplication
+
 ```js
-let prod = 1.5 * 20 // prod = 30
-prod *= 2 // prod = 60
+let prod = 1.5 * 20; // prod = 30
+prod *= 2; // prod = 60
 ```
 
 Division
+
 ```js
-let div = 3 / 2 // div = 1.5
-div /= 1.5 // div = 1
+let div = 3 / 2; // div = 1.5
+div /= 1.5; // div = 1
 ```
 
 Power
+
 ```js
-let cube = 3 ** 3 // cube = 27
+let cube = 3 ** 3; // cube = 27
 ```
 
 Increment
+
 ```js
 let i = 0;
 i++;
@@ -294,37 +304,45 @@ console.log(i); // 1
 ```
 
 Decrement
+
 ```js
 let d = 1;
 d--;
 console.log(d); // 0
 ```
 
-
 ## The String Type
+
 In JavaScript strings are a sequence of characters but unlike other languages we don't have special
 type that represents a single character
 
 example
+
 ```js
-let name = "Shreyas"
+let name = "Shreyas";
 console.log(name); // Shreyas
 ```
+
 Strings can be created with single quotes or double quotes
 example
+
 ```js
-let quote = 'Shreyas said, "JavaScript is a programming language"'
+let quote = 'Shreyas said, "JavaScript is a programming language"';
 console.log(quote); // Shreyas said, "JavaScript is a programming language"
 ```
+
 example
+
 ```js
-let sentence = "It's a line with single quotes"
+let sentence = "It's a line with single quotes";
 console.log(name); // It's a line with single quotes
 ```
 
 ## String operations
+
 uppercase
 example
+
 ```js
 // To Upper Case
 console.log("ThIS iS a StrINg".toUpperCase()); // THIS IS A STRING
@@ -340,12 +358,14 @@ let n = 4;
 console.log(n.toString()); // 4
 
 // Strintg to a number
-let str = "12345"
+let str = "12345";
 console.log(+str); // 12345 (in color :) )
 ```
 
 ## String Template literals
+
 This is a simpler from of string concatenation
+
 ```js
 let hello = "Hello";
 let world = "World";
@@ -354,10 +374,12 @@ console.log(str); // Hello, World!
 ```
 
 ## The Boolean type
+
 Bolean is JavaScript represents a true or false condition.
 There are two boolean literals `true` and `false`
 
 for example
+
 ```js
 let isGrater = 3 > 4; // false because 3 is less than 4
 ```
@@ -365,6 +387,7 @@ let isGrater = 3 > 4; // false because 3 is less than 4
 ## Logical operators
 
 ### Negation
+
 returns the opposite boolean value of the given value
 example
 
@@ -372,7 +395,9 @@ example
 console.log(!true); // false
 console.log(!false); // true
 ```
+
 > Also works with value types too, in JavaScript every value can be coersed (implicitly converted) into a boolean value a few examples are given below
+
 ```js
 console.log(!0); // true
 console.log(!1, !2); // false
@@ -381,9 +406,12 @@ console.log(!"non empty"); // false
 
 console.log(!null, !undefined); // true true
 ```
+
 ### Double Negation
+
 can be used to find the truth value of a value or a variable
 for example
+
 ```js
 let x = 10;
 let y; // undefined
@@ -396,11 +424,12 @@ console.log(!!y); // false
 console.log(!!z); // false
 console.log(!!e); // false
 console.log(!!nonE); // true
-
 ```
 
 ### Equlity
+
 Unlike other languages JavaScript has two equality operators
+
 1. The `==` operator
 1. The `===` operator
 
@@ -409,14 +438,18 @@ We will only use the second one because it's modern and actually logical
 The equality operator returns true if both the values are equal
 
 example
+
 ```js
-let isEqual = 10 === (5 + 5) // true
-isEqual = "10" === 10 // false
+let isEqual = 10 === 5 + 5; // true
+isEqual = "10" === 10; // false
 ```
-> ***note*** ```"10" == 10``` with `==` returns true because of something called type coersion which we aren't ging to go in depth into but remember to use `===` and not `==`
+
+> **_note_** `"10" == 10` with `==` returns true because of something called type coersion which we aren't ging to go in depth into but remember to use `===` and not `==`
 
 ### other logical operators
+
 - Grater than and Less than
+
 ```js
 // Grater than
 console.log(10 > 20); // false
@@ -428,14 +461,15 @@ console.log(10 >= 20); // false
 console.log(10 <= 10); // true
 ```
 
-
 ## The Ternary operator
+
 Used to assign a value based on a condition
 
 for example
+
 ```js
 let condition = 6 <= 10; // condition = true
-let value = condition ? 6 : 4 // value = 6 because 6 is less than or equal to 10
+let value = condition ? 6 : 4; // value = 6 because 6 is less than or equal to 10
 ```
 
 ## Control flow
@@ -443,52 +477,59 @@ let value = condition ? 6 : 4 // value = 6 because 6 is less than or equal to 10
 ### if else
 
 example
+
 ```js
 if (3 > 4) {
-    console.log("3 > 4 ?");
+  console.log("3 > 4 ?");
 } else if (1 === 1) {
-    console.log("It's true");
+  console.log("It's true");
 } else {
-    console.log("Not Possible");
+  console.log("Not Possible");
 }
 ```
 
 ### While
+
 loops until the condition provided returns true
 
 example
+
 ```js
 while (true) {
-    // Runs forever
+  // Runs forever
 } // Running this in your browser will crash the page
 
 // This code logs 0 to 9 in the console
 let x = 0;
 while (x < 10) {
-    console.log(x);
-    x++;
+  console.log(x);
+  x++;
 }
 ```
 
 ### For
 
 example
+
 ```js
 // This logs 0 to 9 to the console
 for (let i = 0; i < 10; i++) {
-    console.log(i);
+  console.log(i);
 }
 ```
 
 ## Arrays
+
 arrays are a sequence of values of any type
 
 ### Creating an array
+
 ```js
-let arr = [1, "Banana", true, null]
+let arr = [1, "Banana", true, null];
 ```
 
 ### Finding the length of an array
+
 ```js
 console.log(arr.length); // 4
 ```
@@ -503,9 +544,11 @@ console.log(arr[1]); // Banana
 console.log(arr[2]); // true
 console.log(arr[3]); // null
 ```
-> ***Note*** There is no out of bounds error if you try to access an eement at a non existing index it just returns `undefined`
+
+> **_Note_** There is no out of bounds error if you try to access an eement at a non existing index it just returns `undefined`
 
 example
+
 ```js
 console.log(arr[4]); // undefined
 console.log(arr[-6]); // undefined
@@ -514,134 +557,145 @@ console.log(arr[-6]); // undefined
 ### Modifying the array
 
 Adding elements at the end
+
 ```js
 arr.push(5);
 console.log(arr); // [ 1, 'Banana', true, null, 5 ]
 ```
 
 Removing elements from the end
+
 ```js
 arr.pop(); // 5
 console.log(arr); // [ 1, 'Banana', true, null ]
 ```
 
 ## Objects
-objects in JavaScript are just key value pairs (like hash map/dictionary/associative 
+
+objects in JavaScript are just key value pairs (like hash map/dictionary/associative
 arrays in other languages)
 
 example
+
 ```js
 let person = {
-    name: "Person's Name",
-    age: 34
-}
+  name: "Person's Name",
+  age: 34,
+};
 
 console.log(person); // { name: "Person's Name", age: 34 }
 ```
 
 ### accessing properties of an object
+
 ```js
 console.log(person.name); // Person's Name
 console.log(person.age); // 34
 
-// OR 
+// OR
 console.log(person["name"]); // Person's Name
 console.log(person["age"]); // 34
 
 // We can modify the values of an object too
-person.age = 35
+person.age = 35;
 console.log(person.age); // 35
 ```
 
 ## Functions
-Function is a block of code that can take 0 or more input parameters and 
-return 0 or 1 output that only runs when explicitly called 
+
+Function is a block of code that can take 0 or more input parameters and
+return 0 or 1 output that only runs when explicitly called
 
 example
-```js
 
+```js
 function simpleFunction() {
-    console.log("Log from a function");
+  console.log("Log from a function");
 }
 
-simpleFunction() // Log from a function
+simpleFunction(); // Log from a function
 
 function withParams(name, age) {
-    console.log(`Hi I am ${name} and I am ${age} years old`);
+  console.log(`Hi I am ${name} and I am ${age} years old`);
 }
 
-withParams("Alice", 24) // Hi I am Alice and I am 24 years old
+withParams("Alice", 24); // Hi I am Alice and I am 24 years old
 
 function add(a, b) {
-    return a + b;
+  return a + b;
 }
 
-let sum = add(3,4)
+let sum = add(3, 4);
 console.log(sum); // 7
 ```
 
-
 ## Object methods
+
 There can be functions associated with objects too
 
 example
+
 ```js
 let person = {
-    firstName: "Bob",
-    lastName: "Smith",
-    getName() {
-        return `${this.firstName} ${this.lastName}`
-    }
-}
+  firstName: "Bob",
+  lastName: "Smith",
+  getName() {
+    return `${this.firstName} ${this.lastName}`;
+  },
+};
 ```
+
 > the `this` keyword in the constructor represents the current object instance
 
 ## Constructor Functions
+
 Unlike other Object oriented languages there are no classes in JavaScript
-> ***Note*** There are classes in JavaScript but are syntactic sugar for Constructor functions
+
+> **_Note_** There are classes in JavaScript but are syntactic sugar for Constructor functions
 
 example
+
 ```js
 function User(firstName, lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName
-    this.name = `${firstName} ${lastName}`
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.name = `${firstName} ${lastName}`;
 }
 ```
-
 
 new user objects can be created from the Constructor function
 
 ```js
-let john = new User("John", "Doe")
+let john = new User("John", "Doe");
 console.log(john); // { firstName: 'John', lastName: 'Doe', name: 'John Doe' }
 ```
 
 ## The Prototype
+
 The most dreaded concept of JavaScript is the Prototype but let's make it simpler
 
 In the above constructor we assign name attribute to the combination of first and last name
-but what if we change either of the properties after object instanciation (creation), it doesn;t update
+but what if we change either of the properties after object instantation (creation), it doesn't update
 to fix this we will add a prototype method to the User function to compute the name of the user when called
 
 **This is same as the object method but this applies to all the objects created with this constructor**
 
 example
-```js
 
+```js
 User.prototype.getName = function () {
-    return `${this.firstName} ${this.lastName}`
-}
+  return `${this.firstName} ${this.lastName}`;
+};
 
 // Now let's use it
 
-let jane = new User("Jane", "Smith")
+let jane = new User("Jane", "Smith");
 console.log(jane.getName()); // Jane Smith
 console.log(jane.name); // Jane Smith
 
 // If we change the user's properties
 
-jane.lastName = "Doe"
+jane.lastName = "Doe";
 console.log(jane.getName()); // Jane Doe
 console.log(jane.name); // Jane Smith
 
@@ -649,68 +703,74 @@ console.log(jane.name); // Jane Smith
 ```
 
 ## The Class
-Weiting constructor functions and the prototype methods is a mess and not very 
-maintainable so most modern browsers support the class declaration which is identical 
+
+Writing constructor functions and the prototype methods is a mess and not very
+maintainable so most modern browsers support the class declaration which is identical
 to a constructor function but is simpler to write and maintain
 
 Let's re-write the User constructor with class syntax
+
 ```js
 class User {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
 
-    constructor(firstName, lastName) {
-        this.firstName = firstName
-        this.lastName = lastName
-    }
-
-    getName() {
-        return `${this.firstName} ${this.lastName}`
-    }
-
+  getName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
 }
 ```
+
 As you can see this is much simpler to write and understand
 
 ## Inheritance
+
 JavaScript supports prototypal inheritance which is basically inheritance but with prototypes
-We can inherit a different prototype for a different prototype but that's messy and not readable 
+We can inherit a different prototype for a different prototype but that's messy and not readable
 so we will simply stick to the class syntax
 
 create a base class
+
 ```js
 class Animal {
-    constructor(name, sound) {
-        this.name = name;
-        this.sound = sound;
-    }
+  constructor(name, sound) {
+    this.name = name;
+    this.sound = sound;
+  }
 
-    makeSound() {
-        console.log(`${this.name} says ${this.sound}`);
-    }
+  makeSound() {
+    console.log(`${this.name} says ${this.sound}`);
+  }
 }
 ```
 
 extend the clsss
+
 ```js
 class Dog extends Animal {
-    constructor(legs) {
-        // calling the base class constructor
-        super("Dog", "BOW BOW!!")
-    }
+  constructor(legs) {
+    // calling the base class constructor
+    super("Dog", "BOW BOW!!");
+  }
 
-    bark() {
-        // call the base class method
-        super.makeSound()
-    }
+  bark() {
+    // call the base class method
+    super.makeSound();
+  }
 }
 
-let d = new Dog()
+let d = new Dog();
 // calling the base class method
-d.makeSound() // Dog says BOW BOW!!
-d.bark() // Dog says BOW BOW!!
+d.makeSound(); // Dog says BOW BOW!!
+d.bark(); // Dog says BOW BOW!!
 ```
+
 > Methods in the derived class can override those from the base class by just re-defining the method in the derived class with the same name and the super.method() calls the base class method even ofter overriding the method
 
 ## JSON - JavaScript Object Notation
+
 This is a data exchange format that can be used to transfer data between two different programs
 JSON is a string with the data encoded as a JavaScript object
 
@@ -720,16 +780,13 @@ JSON supportsall the JavaScript types except functions
 
 ```js
 let person = {
-    name: "John Doe",
-    age: 32,
-    graduated: true,
-    hobbies: [
-        "playing",
-        "listening to music"
-    ]
-}
+  name: "John Doe",
+  age: 32,
+  graduated: true,
+  hobbies: ["playing", "listening to music"],
+};
 
-let json = JSON.stringify(person)
+let json = JSON.stringify(person);
 console.log(json); // {"name":"John Doe","age":32,"graduated":true,"hobbies":["playing","listening to music"]}
 ```
 
@@ -738,9 +795,11 @@ Now this JSON string can be sent to a differnt server or a program
 ### getting the actual object back from the JSON string
 
 ```js
-let data = JSON.parse(`{"name":"John Doe","age":32,"graduated":true,"hobbies":["playing","listening to music"]}`);
+let data = JSON.parse(
+  `{"name":"John Doe","age":32,"graduated":true,"hobbies":["playing","listening to music"]}`
+);
 console.log(data);
-// { 
+// {
 //     name: 'John Doe',
 //     age: 32,
 //     graduated: true,
@@ -751,4 +810,4 @@ console.log(data);
 <br>
 
 > That's it this is the introduction to JavaScript basics. I will go into asynchronous JavaScript
-in the future articles
+> in the future articles
