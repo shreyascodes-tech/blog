@@ -1,0 +1,6 @@
+{
+  "tasks": {
+    "dev:tw": "pnpm tailwindcss -i src/css/global.css  -o ./public/global.css --watch",
+    "dev": "deno task dev:tw & deno run -A --watch ./main.ts"
+  }
+}

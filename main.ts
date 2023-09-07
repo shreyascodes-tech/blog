@@ -1,18 +1,18 @@
-import { handler, loadBlogs, loadAssets } from "./src/blog.tsx";
+import { Hono } from "https://deno.land/x/hono@v3.6.0-rc.1/mod.ts";
+import { pages } from "./src/router.tsx";
+import { serveStatic } from "https://deno.land/x/hono@v3.6.0-rc.1/middleware.ts";
+import { dev } from "./src/utils/dev.tsx";
 
-import blogs from "./blogs.g.json" assert { type: "json" };
-import assets from "./assets.g.json" assert { type: "json" };
+const hono = new Hono();
+dev(hono);
 
-import { serve } from "http";
-import { yellow, bold, underline } from "fmt/colors.ts";
+hono.route("/", pages);
 
-const port = +(Deno.env.get("PORT") ?? "80");
-const DEV = !!Deno.env.get("DEV");
+hono.use(
+  "*",
+  serveStatic({
+    root: "./public",
+  })
+);
 
-serve(handler(DEV ? loadBlogs() : blogs, DEV ? loadAssets() : assets), {
-  port,
-  onListen: ({ port }) =>
-    console.log(
-      `server running on ${yellow(bold(underline("http://localhost:" + port)))}`
-    ),
-});
+Deno.serve(hono.fetch);
